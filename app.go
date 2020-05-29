@@ -124,5 +124,5 @@ func (a *App) initializeRoutes() {
 	a.Router.HandleFunc("/shipping_fullquotation", a.ShippingFullQuotation).Methods("POST")
 	a.Router.HandleFunc("/shipping_quotation", a.ShippingQuotation).Methods("POST")
 	a.Router.HandleFunc("/", homePage)
-	log.Fatal(http.ListenAndServe(":8010", a.Router))
+	log.Fatal(http.ListenAndServe(":"+port, a.Router))
 }
