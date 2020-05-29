@@ -1,0 +1,11 @@
+version: '2'
+services:
+  master_db:
+    image: postgres:latest
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=my_db
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_USER=user
